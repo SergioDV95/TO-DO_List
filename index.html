@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Lista</title>
+</head>
+<body>
+    <section>
+        <fieldset id="lista">
+            <legend id="titulo">Lista de Tareas</legend>
+            <div id="nuevos_elementos" class="columna">
+                <input id="entrada" placeholder="Añade tareas a tu lista aquí...">
+            </div>
+            <div id="listas">
+                <div id="lista_a" class="columna">
+                    <p class="nombre">Pendientes</p>
+                    <ol id="incompletos" class="listado"></ol>
+                </div>
+                <div id="lista_b" class="columna">
+                    <p class="nombre">Hechos</p>
+                    <ul id="completos" class="listado"></ul>
+                </div>
+            </div>
+        </fieldset>
+    </section>
+</body>
+<script src="./index.js"></script>
+</html>

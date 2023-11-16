@@ -1,0 +1,192 @@
+@charset "UTF-8";
+body {
+  width: 98vw;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+#lista {
+  color: rgb(39, 39, 39);
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px 25px 70px;
+  border: none;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 40px;
+}
+#lista #titulo {
+  position: relative;
+  padding-left: 25px;
+  font-weight: 600;
+}
+#lista #nuevos_elementos {
+  margin-bottom: 10px;
+  padding-top: 0;
+  padding-left: 40px;
+  gap: 15px;
+}
+#lista #nuevos_elementos #entrada {
+  text-indent: 5px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  outline: none;
+  width: 10cm;
+  height: 22px;
+  font-size: 18px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 13px;
+}
+#lista #nuevos_elementos #entrada::-moz-placeholder {
+  text-indent: 5px;
+}
+#lista #nuevos_elementos #entrada::placeholder {
+  text-indent: 5px;
+}
+#lista #nuevos_elementos #entrada:focus {
+  border: 1px solid;
+}
+#lista #nuevos_elementos #etiqueta_entrada {
+  font-weight: 600;
+}
+#lista #listas {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  #lista #listas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+  }
+}
+#lista #listas .nombre {
+  margin-bottom: 15px;
+  margin: 0;
+  font-weight: 600;
+}
+#lista #listas .listado {
+  margin: 0;
+}
+#lista #listas #lista_a {
+  background: linear-gradient(to right, rgba(122, 147, 172, 0.7), rgba(122, 147, 172, 0.25));
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 1024px) {
+  #lista #listas #lista_a {
+    width: 60%;
+  }
+}
+#lista #listas #lista_a #incompletos {
+  padding: 15px;
+  width: 95%;
+}
+#lista #listas #lista_b {
+  background: linear-gradient(to right, rgba(146, 188, 234, 0.7), rgba(146, 188, 234, 0.25));
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 1024px) {
+  #lista #listas #lista_b {
+    width: 60%;
+  }
+}
+#lista #listas #lista_b #completos {
+  padding: 15px;
+  width: 95%;
+}
+
+.elemento {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-indent: 0;
+  position: relative;
+  border-radius: 2em;
+  padding: 10px;
+  margin: 10px 0;
+}
+.elemento .checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.elemento .etiqueta {
+  display: inline-block;
+  cursor: pointer;
+}
+.elemento .etiqueta::before {
+  margin-right: 10px;
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  border: 1px solid #999;
+  position: relative;
+  top: 2px;
+  background-color: white;
+  border-radius: 2em;
+}
+.elemento .checkbox:checked + .etiqueta::after {
+  color: rgb(126, 255, 126);
+  content: "✔";
+  font-size: 30px;
+  line-height: 16px;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+}
+@media only screen and (min-width: 1024px) {
+  .elemento .checkbox:checked + .etiqueta::after {
+    top: 9px;
+  }
+}
+.elemento .eliminar {
+  display: none;
+  position: absolute;
+  right: 25px;
+  transform: scale(1.5) translate(0, 3px);
+}
+
+.elemento:hover .eliminar {
+  display: inline-block;
+}
+
+.fila {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border-radius: 15px;
+  padding: 25px;
+}/*# sourceMappingURL=index.css.map */
